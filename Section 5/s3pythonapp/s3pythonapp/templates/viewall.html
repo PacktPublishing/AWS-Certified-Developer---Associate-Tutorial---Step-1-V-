@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+
+
+{% block content %}
+    <div class="container">
+        {% for image_name, descr in all_items %}
+        <div class="panel panel-primary">
+          <div class="panel-heading">{{image_name}}</div>
+
+          <div class="panel-body">
+          <img src="{{bucket_url}}/{{image_name}}"/>
+          {{descr.description}}
+          </div>
+        </div>
+        {% empty %}
+          <h1> There are no images to display at present </h1>
+
+   </div>
+
+
+  {% endfor %}
+
+    </div>
+{% endblock %}

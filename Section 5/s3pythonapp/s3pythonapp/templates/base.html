@@ -1,0 +1,23 @@
+{% extends 'bootstrap3/bootstrap3.html' %}
+
+{% load bootstrap3 %}
+
+{% block bootstrap3_title %}{% block maintitle %}My Sample App{% endblock %}{% endblock %}
+
+{% block bootstrap3_content %}
+
+{% block menucontent %}
+<div class="navbar sticky-top navbar-inverse bg-faded">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+    <a class="navbar-brand" href="{% url 'upload' %}">Upload New Image</a>
+    <a class="navbar-brand" href="{% url 'view' %}">View Images</a>
+  </div>
+</div>
+
+        {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+
+        {% block content %}(no content){% endblock %}
+
+{% endblock %}
+{% endblock %}

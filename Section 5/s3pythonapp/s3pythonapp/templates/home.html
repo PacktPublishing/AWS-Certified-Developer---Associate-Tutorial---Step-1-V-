@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block title %}Photo App on AWS{% endblock %}
+
+{% block content %}
+
+
+  <div class="container">
+
+   <div class="row row-offcanvas row-offcanvas-right">
+       <p class="pull-right visible-xs">
+         <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+       </p>
+       <div class="jumbotron">
+         <h1>Photo Application on AWS</h1>
+         <p>This is a sample application to upload and view images on S3.<br>
+           </p>
+         </div>
+</div>
+{% endblock %}

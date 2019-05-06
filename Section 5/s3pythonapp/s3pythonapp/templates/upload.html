@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block title %}
+    Forms
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <h1>Upload a new image file</h1>
+    <br>
+    <form role="form" method="post" enctype="multipart/form-data"class="form-vertical">
+        {% csrf_token %}
+        {% bootstrap_form form  class="form-control-file" size="large" layout=layout %}
+        {% buttons submit='OK' reset="Cancel" %}{% endbuttons %}
+
+    </div>
+{% endblock %}

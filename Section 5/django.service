@@ -1,0 +1,13 @@
+#!bin/sh
+
+[Unit]
+Description=Sample S3 Django Application
+After=network.target
+
+[Service]
+PIDFILE=/var/run/cric.pid
+ExecStart=/usr/bin/python /home/ubuntu/s3pythonapp/manage.py runserver 0.0.0.0:80
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
